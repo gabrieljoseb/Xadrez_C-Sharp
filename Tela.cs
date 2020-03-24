@@ -1,6 +1,6 @@
 ﻿using System;
 using tabuleiro;
-using tabuleiro.enums;
+
 namespace Xadrez_console
 {
     class Tela
@@ -11,10 +11,10 @@ namespace Xadrez_console
             {
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if (tab.Peca(i, j) != null)
-                        Console.Write(tab.Peca(tab.Linhas, tab.Colunas) + " ");
+                    if (tab.Peca(i, j) == null)
+                        Console.Write("- ");           
                     else
-                        Console.Write("- ");
+                        Console.Write(tab.Peca(i, j));
                 }
                 Console.WriteLine();
             }

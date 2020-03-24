@@ -1,5 +1,4 @@
-﻿using tabuleiro.enums;
-namespace tabuleiro
+﻿namespace tabuleiro
 {
     class Peca
     {
@@ -8,13 +7,9 @@ namespace tabuleiro
         public int QtdMovimentos { get; protected set; }
         public Tabuleiro Tab { get; protected set; }
 
-        public Peca()
+        public Peca(Tabuleiro tab, Cor cor)
         {
-        }
-
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
-        {
-            Posicao = posicao;
+            Posicao = null;
             Cor = cor;            
             Tab = tab;
             QtdMovimentos = 0;
