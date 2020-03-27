@@ -17,11 +17,8 @@ namespace Xadrez_console
                     try
                     {
                         Console.Clear();
-                        Tela.ImprimirTabuleiro(partida.Tab);
 
-                        Console.WriteLine();
-                        Console.WriteLine($"Turno atual: {partida.Turno}");
-                        Console.WriteLine($"Aguardando jogada da peça {partida.JogadorAtual}");
+                        Tela.ImprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
