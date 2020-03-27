@@ -29,6 +29,11 @@
         {
             QtdMovimentos++;
         }
+        
+        public void DecrementarQtdMovimentos()
+        {
+            QtdMovimentos--;
+        }
 
         public bool PodeMoverPara(Posicao pos)
         {

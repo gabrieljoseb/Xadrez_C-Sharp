@@ -17,7 +17,6 @@ namespace Xadrez_console
                     try
                     {
                         Console.Clear();
-
                         Tela.ImprimirPartida(partida);
 
                         Console.WriteLine();
@@ -41,8 +40,10 @@ namespace Xadrez_console
                     {
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
-                    }
-                }                
+                    }                   
+                }
+                Console.Clear();
+                Tela.ImprimirPartida(partida);
             }
             catch (DomainException e)
             {
