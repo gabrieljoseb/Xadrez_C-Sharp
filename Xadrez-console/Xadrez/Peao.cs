@@ -74,7 +74,7 @@ namespace xadrez
 
         public override string ToString()
         {
-            return "R";
+            return "P";
         }
     }
 }
