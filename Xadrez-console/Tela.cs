@@ -78,7 +78,7 @@ namespace Xadrez_console
                 Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if (posicoesPossiveis[i, j] == true)
+                    if (posicoesPossiveis[i, j])
                         Console.BackgroundColor = fundoAlterado;
                     else
                         Console.BackgroundColor = fundoOriginal;
