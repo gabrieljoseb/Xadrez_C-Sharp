@@ -37,7 +37,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.Linha++;
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna);
             }
 
             //Direita
@@ -47,7 +47,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.Coluna++;
+                pos.DefinirValores(pos.Linha, pos.Coluna + 1);
             }
 
             //Esquerda
@@ -57,7 +57,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.Coluna--;
+                pos.DefinirValores(pos.Linha, pos.Coluna - 1);
             }
 
             //NE
@@ -67,7 +67,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna + 1);
+                pos.DefinirValores(pos.Linha - 1, pos.Coluna + 1);
             }
 
             //SE
@@ -77,7 +77,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna + 1);
             }
 
             //SO
@@ -87,7 +87,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna - 1);
             }
 
             //NO
@@ -97,7 +97,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
                     break;
-                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
+                pos.DefinirValores(pos.Linha - 1, pos.Coluna - 1);
             }
             return mat;
         }
